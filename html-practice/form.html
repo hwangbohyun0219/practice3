@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼(form)</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <fieldset>
+        <legend>기본 정보</legend>
+        <!-- 명시적인 방법 -->
+        <label for="id">아이디 : </label><input type="text" id="id" />
+        <!-- 암묵적인 방법 -->
+        <label>비밀번호 : <input type="password" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>옵션 정보</legend>
+        <label for>가족관계 : <input type="text" /></label>
+        <label>생년원일 : <input type="text" /></label>
+      </fieldset>
+    </form>
+
+    <!-- textarea -->
+    <!-- 여러줄 입력 요소 -->
+    <textarea rows="10" cols="20"></textarea>
+
+    <!-- select 태그 -->
+    <form action="" method="">
+      <!-- multiple속성 / 선택을 두개 이상 할 수 있음 -->
+      <select size="2">
+        <optgroup label="성별">
+          <option value="male">남</option>
+          <option value="female" selected>여</option>
+        </optgroup>
+      </select>
+      <input type="text" readonly />
+
+      <!-- maxlength는 글자수 제한 / placeholder는 내용을 흐리게 설명해줌 -->
+      <input type="text" maxlength="2" placeholder="아이디" />
+
+      <!-- <input type="button" value="안녕" /> -->
+      <button disabled>안녕</button>
+
+      <!-- checkbox / checked는 체크박스가 체크된 상태로 나옴 -->
+      <input type="checkbox" checked />
+    </form>
+  </body>
+</html>
