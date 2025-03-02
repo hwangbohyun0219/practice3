@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 다루기</title>
+    <style>
+      /* link, visited, hover, active, checked, disabled, enabled */
+      a:active {
+        color: red;
+      }
+      input:checked + label {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">link</a>
+    <input type="checkbox" checked />
+    <label>성별</label>
+    <dl>
+      <dt>CSS</dt>
+      <dd>CSS는 Cascading Style Sheets의 약자이다.</dd>
+    </dl>
+  </body>
+</html>

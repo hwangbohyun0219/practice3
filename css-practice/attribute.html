@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 속성</title>
+    <style>
+      h1 {
+        /* 폰트패밀리의 폰트가 사용자의 컴퓨터나 웹 브라우저에서 지원하는 것이어야 그 폰트로 보여짐 */
+        /* 제네릭 폰트 : serif, sans-serif, monospace, fantasy, cursive / dotum체가 없으면 제네릭 폰트로 대체된다. */
+        /* 글꼴에 띄어쓰기가 있을 경우 ""를 사용한다 혹은 한글로 되어 있을 경우도 */
+        font-family: dotum, "바탕", "Times New Roman", serif;
+        font-size: 16px; /* rem, em, px */
+        /* 글짜 크기를 지정 / bold는 700정도이고 normal은 400정도(일반적인 크기)이다. bolder와 lighter는 상대적인 값이다. */
+        font-weight: normal;
+        /* 영문 텍스트를 크기가 작은 대문자로 작성한다. */
+        /* font-variant: small-caps; */
+        color: red;
+        /* 텍스트의 정렬을 지정할 때 사용 */
+        text-align: justify;
+        /* 줄과 줄사이의 간격인 행간을 지정할 때 사용 */
+        line-height: 2;
+      }
+      h2 {
+        font-size: 32px;
+        /* none, line-through, overline, underline */
+        text-decoration: overline;
+        /* 텍스트와 텍스트 사이의 간격인 자간을 지정할 때 사용 */
+        letter-spacing: 16px;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Lorem ipsum sit amet consectetur adipisicing elit. Nemo cum accusamus quis
+      quof reiciendis aspernatur dolorum, nostrum soluta voluptate quos iure
+      amet velit quo nam culpa consequatur. Quis, nihil quam.
+    </h1>
+    <h2>ABC</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <a href="#">link</a>
+  </body>
+</html>

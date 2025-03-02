@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 모델을 구성하는 속성 다루기</title>
+    <style>
+      .block-1 {
+        /* margin 겹침 현상 주의 */
+        margin-bottom: 50px;
+
+        /* solid, dotted, dashed */
+        border: 1px solid red;
+        border-width: 1px;
+        border-style: solid;
+        border-color: red;
+
+        padding: 10px 20px 30px 40px;
+
+        width: 100px;
+        height: 100px;
+
+        box-sizing: content-box;
+      }
+      .block-2 {
+        margin-top: 200px;
+      }
+      /* 인라인 요소는 마진값의 탑과 바텀을 설정할 수 없다 */
+      .inline-1 {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="block-1">block-1</p>
+    <p class="block-2">block-2</p>
+    <span class="inline-1">inline-1</span>
+    <span class="inline-2">inline-2</span>
+  </body>
+</html>
