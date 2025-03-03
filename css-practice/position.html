@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치 속성으로 HTML 요소 배치하기</title>
+    <style>
+      body {
+        height: 5000px;
+      }
+      .container {
+        background-color: #ccc;
+        width: 100%;
+        padding: 1rem;
+        /* margin: 150px;
+        position: relative; */
+
+        /* float로 인해 부모 요소가 자식 요소를 인식하지 못 할 때 */
+        overflow: auto;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .red {
+        background-color: red;
+        /* static(기본값), absolute,  */
+        /* position: absolute; */
+        /* 기본값이 0이고 0보다 클수록 더 높은 위치에 배치된다 */
+        /* z-index: 10; */
+        float: left;
+      }
+      .green {
+        background-color: green;
+        /* 기본 흐름에서 벗어나서 배치된다, 공중에 뜬다 */
+        /* position: absolute;
+        right: 100px;
+        bottom: 200px; */
+
+        /* 원래 위치를 보장하면서 좌표가 배치된다 */
+        /* position: relative;
+        left: 200px; */
+
+        /* position: fixed;
+        right: 100px;
+        bottom: 50px; */
+
+        /* 내가 지정한 좌표에 닿으면 fixed처럼 움직임 */
+        /* position: sticky;
+        top: 0; */
+
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+
+        float: left;
+      }
+      .blue {
+        background-color: blue;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box red"></div>
+      <div class="box green"></div>
+      <div class="box blue"></div>
+    </div>
+  </body>
+</html>

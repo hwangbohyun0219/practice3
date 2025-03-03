@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변형 효과 적용하기</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* translate(,), translateX(), translateY() */
+        /* 좌우로 균등하게 들어남 */
+        /* scale(,), scaleX(), translateY():크기를 배로 늘리는 것 */
+        /* skew():비틀고 싶은 각도 */
+        /* rotateX, rotateY, rotate(양수나 음수) */
+      }
+      .box:hover {
+        transform: rotate(70deg);
+        /* 변형의 기준점을 바꿀 수가 있음 */
+        transform-origin: bottom right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

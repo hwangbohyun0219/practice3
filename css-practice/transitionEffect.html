@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전환 효과 속성 적용하기</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin-bottom: 10px;
+        /* 이런 경우는 all이라고 적어도 된다 */
+        transition-property: background-color, width;
+        transition-duration: 2s;
+        /* linear(일정하게), ease, ease-in, ease-in-out, ease-out,cub */
+        transition-timing-function: linear;
+        transition-delay: 3s;
+        transition: background-color 2s linear 3s, width 2s linear 3s;
+      }
+      body:hover .box {
+        width: 300px;
+        background-color: blue;
+      }
+      /* .box:nth-of-type(1) {
+        transition-timing-function: linear;
+      }
+      .box:nth-of-type(2) {
+        transition-timing-function: ease;
+      }
+      .box:nth-of-type(3) {
+        transition-timing-function: ease-in;
+      }
+      .box:nth-of-type(4) {
+        transition-timing-function: ease-out;
+      }
+      .box:nth-of-type(5) {
+        transition-timing-function: ease-in-out;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>
