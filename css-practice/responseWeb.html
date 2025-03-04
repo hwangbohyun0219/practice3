@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹을 위한 미디어 쿼리 사용하기</title>
+    <style>
+      /* only/not(only의 반대같은) */
+      /* all : 모든 디바이스 기기를 대상으로 함,
+      print : 인쇄와 관련된 화면에 대한 미디어 타입,
+      screen : 화면이 존재하는 기기들을 대상으로 함,
+      speech : 스크린 리더기와 같은 보조 프로그램
+       */
+      /* 미디어 쿼리가 적용 가능한 모든 기기를 대상으로
+      화면이 존재하는 기기에서 그 기기의 최소 넓이가 
+      1140px이상일 경우 이 중괄호 안에 있는 CSS코드를 적용해라 */
+      /* portrait:화면의 방향이 세로일 때만 적용해라
+      landscape:화면의 방향이 가로일 때를 의미 */
+      @media only screen and (min-width: 340px) and (orientation: landscape) {
+        p {
+          color: red;
+        }
+      }
+      /* 640px보다 작으면 이 css기능을 적용해라 */
+      /* 중첩 사용 가능 */
+      @media only screen and (max-width: 640px) {
+        p {
+          color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorm deserunt
+      blanditiis, ab soluta accusantium rereum unde quisquam aliquam quaerat,
+      fugit sit quia asperenatur adipisci aliquid asperiores. Ut id alias
+      minima.
+    </p>
+  </body>
+</html>

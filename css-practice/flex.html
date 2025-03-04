@@ -9,18 +9,30 @@
         color: white;
         background-color: #c9c9c9;
         padding: 1rem;
+        height: 400px;
         /* flex, inline-flex */
         display: flex;
         /* row(기본값), row-verse, column, column-reverse */
         flex-direction: row;
-        /* wrap, wrap-reverse :  */
+        /* wrap : 박스들의 크기를 유지하면서 공간을 채움 , wrap-reverse : 역방향 */
         flex-wrap: wrap;
+        /* flex속성을 모아서 한번에 사용 */
+        flex-flow: row wrap;
+        /* flex-start, center, space-between, space-around, space-evenly */
+        justify-content: center;
+        /* stretch(기본값), center, flex-start, flex-end, baseline */
+        align-items: baseline;
+        /* flex-start, flex-end, center */
+        align-content: center;
       }
       .box {
         background-color: red;
       }
       .box:nth-child(2n) {
         background-color: orange;
+      }
+      .box:nth-of-type(1) {
+        align-self: normal;
       }
     </style>
   </head>
