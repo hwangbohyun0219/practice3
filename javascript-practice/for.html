@@ -15,17 +15,51 @@
       }
 
       //do-while
-      // let num1 = 1;
-      // do{
-
-      // }while(){
-
-      // }
+      let num1 = 1;
+      do {} while (num1 > 2);
+      {
+      }
 
       //for
-      // for (let i = 0; i <= 5; i++) {
-      //   console.log(i);
-      // }
+      for (let i = 0; i <= 5; i++) {
+        console.log(i);
+      }
+      //중첩 for문
+      for (let i = 0; i < 2; i++) {
+        console.log(`i:${i}`);
+        for (let k = 0; k < 2; k++) {
+          console.log(`k:${k}`);
+        }
+      }
+      //배열
+      const arr = ["apple", "banana", "orange"];
+      //while
+      while (i < arr.length) {
+        console.log(Arr[i]);
+        i++;
+      }
+      //for
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      //for-in
+      for (let index in arr) {
+        console.log(arr[index]);
+      }
+      //객체를 반복할 수도 있음
+      const obj = {
+        name: "철수",
+        age: 20,
+      };
+      for (let key in obj) {
+        console.log(obj[key]);
+      }
+
+      //break : 즉시 반복문을 종료시키는 역할, continue : 해당 루프를 건너띄는 역할
+      for (let i = 0; i < 5; i++) {
+        if (i === 3) break;
+        console.log(i);
+      }
     </script>
   </body>
 </html>
