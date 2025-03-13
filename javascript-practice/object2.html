@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체2</title>
+  </head>
+  <body>
+    <script>
+      //표준내장객체 : 자바에서 기본적으로 제공해주는 객체
+      //String객체
+      //length
+      const str = "abc";
+      console.log(Str.length);
+      //includes
+      const email = "testnaver.com";
+      if (email.includes("@") === false) {
+        console.log("@가 없습니다.");
+      }
+      //indexOf : 내가 찾고자 하는 문자의 위치를 알려줌, 없는 문자를 찾으려고 하면 -1을 반환
+      const email2 = "test@naver.com";
+      console.log(email2.indexOf("t")); //0
+
+      if (email2.indexOf("@") === -1) {
+        console.log("@가 없습니다");
+      }
+
+      //trim : 앞뒤 공백 없애줌
+      const email3 = " test@naver.com ";
+      console.log(email3.trim());
+
+      //replaceAll : 중간 공백 없애줌
+      const email4 = "test naver.com";
+      console.log(email4.replaceAll(" ", ""));
+      //만약 replaceAll을 사용할 수 없다면, replace와 정규식을 사용
+      console.log(email4.replace(/ /gi, ""));
+
+      //Array객체, 어떠한 메소드를 사용했을 때 원본 변수에 할당되어 있는 변수가 손상이 된다면 파괴적 메소드, 원본이 파괴되지 않는다면 비파괴적 메소드
+      const arr = ["a", "b", "c"];
+      //파괴적 메소드 : arr.push("d"); //[a,b,c,d]    arr.pop(); //[a,b]
+      const popResult = arr.pop();
+      console.log(popResult); //[a,b]
+      //비파괴적 메소드
+      arr.forEach(function (v) {
+        //forEach는 배열 안의 변수를 하나씩 탐색
+        console.log(v); //a b c
+      });
+      console.log(arr); // a랑 b만 남음
+
+      //date객체, date객체를 따로 생성한 후 사용
+      const date = new Date();
+      console.log(date.getFullYear()); // 2025
+
+      //Math객체
+      const random = Math.radom() * 20 + 1; //0이상 1미만의 난수를 구함,  0이상 20미만의 수를 구하려면 20을 곱하고 1을 더함
+      console.log(Math.floor(random)); // 0.4545685965695 ,  floor는 소숫점을 제거
+    </script>
+  </body>
+</html>

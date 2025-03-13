@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체1</title>
+  </head>
+  <body>
+    <script>
+      //키에 해당하는 부분에 띄어쓰기가 있으면 ''로 감싸주고 키로 값을 불러낼 때에도 대괄호 연산자를 사용해야 함
+      const person = {
+        name: "Sucoding",
+        age: 20,
+        isAdult: false,
+        "phone number": "010-1234-1234",
+        printInfo: function (msg) {
+          console.log(msg);
+        },
+      };
+      //속성의 값을 바꾸고 싶을 때
+      person.name = "철수";
+      //속성을 새로 추가하고 싶을 때
+      person.gender = "man";
+      //속성을 삭제하고 싶을 때
+      delete person.age;
+
+      console.log(person.name);
+      console.log(person["phone number"]);
+      person.printInfo(hello);
+
+      //객체와 같은 참조 자료형은 얕은 복사가 된다 => 객체는 이 객체 자체가 들어가 있는 것이 아니라
+      //이 객체가 위치해 있는 메모리의 주석값이 들어가 있다
+      const obj = {
+        wheel: 4,
+      };
+      const obj2 = obj;
+      delete obj.wheel;
+      console.log(obj, obj2);
+      //결과 : {} {}가 나온다. 객체는 얕은 복사함으로
+    </script>
+  </body>
+</html>

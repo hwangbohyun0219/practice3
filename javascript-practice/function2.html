@@ -6,6 +6,51 @@
     <title>함수2</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      function sum(num1, num2) {
+        const result = num1 + num2;
+        console.log(result);
+      }
+      sum(10, 20);
+
+      //함수스코프 : 함수 내부는 지역스코프와 함수 외부는 전역스코프
+      //let과 const만 스코프가 달라지고 var는 달라지지 않음
+      function sum() {
+        let a = 10;
+        console.log(`함수 내부에서 a 참조 :  ${a}`);
+      }
+      sum();
+      console.log(`함수 외부에서 a 참조 : ${a}`);
+
+      //블록스코프도 마찬가지
+      {
+        let a = 10;
+        console.log(`블록문 내부에서 변수 a : ${a}`);
+      }
+      console.log(`블록문 외부에서 변수 a : ${a}`);
+
+      //함수 선언문도 호이스팅된다
+      printName();
+      function printName() {
+        console.log("수코딩");
+      }
+      //함수 표현식은 호이스팅되지 않는다
+      var printName2;
+      printName2();
+      var printName2 = function printname2() {
+        console.log("수코딩");
+      };
+
+      //최초 한번만 실행되고 더 이상 사용할 수 없음 => 전역스코프가 오염되었다 => 오염을 방지하기 위해 즉시실행함수를 만들 수 있다
+      (function init() {
+        console.log("init");
+      })();
+
+      function init() {
+        console.log("init2");
+      }
+
+      console.log(init());
+    </script>
   </body>
 </html>
