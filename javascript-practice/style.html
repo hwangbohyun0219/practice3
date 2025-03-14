@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>style</title>
+  </head>
+  <body>
+    <p id="text">text</p>
+    <script>
+      const pEl = document.getElementById("text");
+      //해당 노드를 잘 가져오는지 확인하는 방법, 잘못가져오면 none이라고 뜸
+      console.log(pEl);
+      pEl.style.color = "rgb(0,0,255)";
+      pEl.style.backgroundColor = "red";
+      pEl.style.fontSize = "30px";
+    </script>
+  </body>
+</html>

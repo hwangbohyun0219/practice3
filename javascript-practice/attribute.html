@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attribute</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .fz20 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.gilbut.co.kr/" class="fz20">길벗</a>
+    <script>
+      const aEl = document.querySelector("a");
+      //console.log(aEl.getAttribute("href"));
+      //가져오는 게 되면 할당하는 것도 된다
+      //aEl.setAttribute("href", "https://www.naver.com");
+      //aEl.setAttribute("target", "_blank");
+      //aEl.removeAttribute("href");
+      aEl.classList.add("red"); //기존에 있던 fz20을 보존하면서 red를 추가
+      aEl.setAttribute("class", "red"); //기존에 있던 fz20이 사라지고 새로운 값을 통채로 할당
+    </script>
+  </body>
+</html>
